@@ -1,4 +1,4 @@
-# R$^2$S: Recognize-then-Refine-Spot network
+# R^2S: Recognize-then-Refine-Spot network
 
 
 ![model_overview](./figures/framework.png)
