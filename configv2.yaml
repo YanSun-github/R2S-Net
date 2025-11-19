@@ -1,0 +1,285 @@
+dataset: "cas(me)2" # "cas(me)^2"
+cas(me)2:
+  dataset: "cas(me)2"
+  # dataset statistics & training configuration
+  RATIO_SCALE: 1
+  SEGMENT_LENTH: 256
+  RECEPTIVE_FILED: 15
+  save_model: True
+  save_intervals: 1   # save ckpt for every epoch
+  micro_average_len: 15
+  macro_average_len: 59
+  micro_max: 80
+  micro_min: 15 #8-16
+  macro_max: 90 #16 117
+  macro_min: 15
+  epoch_begin: 1
+  nms_top_K_micro: 2
+  nms_top_K_macro: 5
+  RAB_args: {'layer_num': 2, 'drop_out': 0.3, 'num_heads': 8, 'dim_feedforward': 128}
+  micro_left_min_dis: 13  # micro_min // 2
+  micro_left_max_dis: 60
+  micro_right_min_dis: 13
+  micro_right_max_dis: 60
+
+  macro_left_min_dis: 7
+  macro_left_max_dis: 29
+  macro_right_min_dis: 7  # macro_min // 2
+  macro_right_max_dis: 29
+#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment256"
+  project_root: "./"
+  feature_root: ~
+  segment_feat_root: "/data/DataSets/CASME2pro/feature_segment/"#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment" #"/data/DataSets/cas(me)^2/feature_segment10"
+  model_save_root: ~
+  output_dir_name: ~
+  anno_csv: "/code/CodeTest/wzl/AUW-GCN/update_CASME2.csv"
+  num_workers: 2
+  device: 'cuda:0'
+
+
+  abfcm_training_lr: 0.01
+  abfcm_weight_decay: 0.1
+  abfcm_lr_scheduler: 0.96
+  abfcm_apex_gamma: 1
+  abfcm_apex_alpha: 0.90
+  abfcm_action_gamma: 1
+  abfcm_action_alpha: 0.80
+  abfcm_start_end_gama: 1
+  abfcm_start_end_alpha: 0.90
+  abfcm_label_smooth: 0.16
+  abfcm_best_epoch: 47
+
+  micro_apex_score_threshold: 0.45
+  macro_apex_score_threshold: 0.45
+
+  epochs: 100
+  batch_size: 128
+
+  verbose: False
+
+  macro_ration: 0.5 # balance micro and macro
+  micro_normal_range: 1
+  macro_normal_range: 3
+
+  subject_list: [
+      "casme_016","casme_015","casme_019","casme_020","casme_021",
+      "casme_022","casme_023","casme_024","casme_025","casme_026",
+      "casme_027","casme_029","casme_030","casme_031","casme_032",
+      "casme_033","casme_034","casme_035","casme_036","casme_037",
+      "casme_038","casme_040"
+  ]
+cas(me)^2:
+  dataset: "cas(me)^2"
+  # dataset statistics & training configuration
+  RATIO_SCALE: 1
+  SEGMENT_LENTH: 256
+  RECEPTIVE_FILED: 15
+  save_model: True
+  save_intervals: 1   # save ckpt for every epoch
+  micro_average_len: 15
+  macro_average_len: 59
+  micro_max: 30
+  micro_min: 5 #8-16
+  macro_max: 90 #16 117
+  macro_min: 15
+  epoch_begin: 1
+  nms_top_K_micro: 2
+  nms_top_K_macro: 5
+  RAB_args: {'layer_num': 2, 'drop_out': 0.3, 'num_heads': 8, 'dim_feedforward': 128}
+  micro_left_min_dis: 2  # micro_min // 2
+  micro_left_max_dis: 9
+  micro_right_min_dis: 2
+  micro_right_max_dis: 9
+
+  macro_left_min_dis: 7
+  macro_left_max_dis: 29
+  macro_right_min_dis: 7  # macro_min // 2
+  macro_right_max_dis: 29
+#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment256"
+  project_root: "./"
+  feature_root: ~
+  segment_feat_root: "/data/DataSets/cas(me)^2/landmarkmat_framenor1023"#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment" #"/data/DataSets/cas(me)^2/feature_segment10"
+  model_save_root: ~
+  output_dir_name: ~
+  anno_csv: "/code/CodeTest/wzl/AUW-GCN/updated_target.csv"
+  num_workers: 2
+  device: 'cuda:0'
+
+
+  abfcm_training_lr: 0.01
+  abfcm_weight_decay: 0.1
+  abfcm_lr_scheduler: 0.96
+  abfcm_apex_gamma: 1
+  abfcm_apex_alpha: 0.90
+  abfcm_action_gamma: 1
+  abfcm_action_alpha: 0.80
+  abfcm_start_end_gama: 1
+  abfcm_start_end_alpha: 0.90
+  abfcm_label_smooth: 0.16
+  abfcm_best_epoch: 47
+
+  micro_apex_score_threshold: 0.4
+  macro_apex_score_threshold: 0.45
+
+  epochs: 100
+  batch_size: 128
+
+  verbose: False
+
+  macro_ration: 0.5 # balance micro and macro
+  micro_normal_range: 1
+  macro_normal_range: 3
+
+  subject_list: [
+      "casme_016","casme_015","casme_019","casme_020","casme_021",
+      "casme_022","casme_023","casme_024","casme_025","casme_026",
+      "casme_027","casme_029","casme_030","casme_031","casme_032",
+      "casme_033","casme_034","casme_035","casme_036","casme_037",
+      "casme_038","casme_040"
+  ]
+#  subject_list: [
+#    "casme_016","casme_015"
+#  ]
+
+samm:
+  dataset: "samm"
+  RATIO_SCALE: 1
+  SEGMENT_LENTH: 256
+  RECEPTIVE_FILED: 15
+
+  save_model: True
+  save_intervals: 1
+  micro_average_len: 9
+  macro_average_len: 54
+  macro_max: 646
+  macro_min: 12
+  micro_max: 18
+  micro_min: 4
+  epoch_begin: 1
+  nms_top_K_micro: 3
+  nms_top_K_macro: 6
+
+  micro_left_min_dis: 2
+  micro_left_max_dis: 8
+  micro_right_min_dis: 2
+  micro_right_max_dis: 10
+
+  macro_left_min_dis: 6
+  macro_left_max_dis: 27
+  macro_right_min_dis: 6
+  macro_right_max_dis: 27
+
+  project_root: "./"
+  feature_root: ~
+  segment_feat_root: "/data/DataSets/AUW-gcn/features/samm_25/feature_segment_25/"
+  model_save_root: ~
+  output_dir_name: ~
+  anno_csv: "/code/CodeTest/wzl/AUW-GCN/updated_targetsamm.csv"
+  num_workers: 1
+  device: 'cuda:0'
+
+
+  abfcm_training_lr: 0.01
+  abfcm_weight_decay: 0.1
+  abfcm_lr_scheduler: 0.96
+  abfcm_apex_gamma: 1
+  abfcm_apex_alpha: 0.90
+  abfcm_action_gamma: 1
+  abfcm_action_alpha: 0.80
+  abfcm_start_end_gama: 1
+  abfcm_start_end_alpha: 0.90
+  abfcm_label_smooth: 0.16
+  abfcm_best_epoch: 47
+
+  micro_apex_score_threshold: 0.40
+  macro_apex_score_threshold: 0.50
+
+  epochs: 100
+  batch_size: 128
+
+  verbose: False
+
+  macro_ration: 0.7
+  micro_normal_range: 1
+  macro_normal_range: 3
+
+  subject_list: [
+        "samm_007","samm_006","samm_008","samm_009","samm_010","samm_011",
+        "samm_012","samm_013","samm_014","samm_015","samm_016","samm_017",
+        "samm_018","samm_019","samm_020","samm_021","samm_022","samm_023",
+        "samm_024","samm_025","samm_026","samm_028","samm_030","samm_031",
+        "samm_032","samm_033","samm_034","samm_036","samm_035","samm_037"
+  ]
+
+all:
+  dataset: "all"
+  # dataset statistics & training configuration
+  RATIO_SCALE: 1
+  SEGMENT_LENTH: 256
+  RECEPTIVE_FILED: 15
+  save_model: True
+  save_intervals: 1   # save ckpt for every epoch
+  micro_average_len: 15
+  macro_average_len: 59
+  micro_max: 30
+  micro_min: 5 #8-16
+  macro_max: 90 #16 117
+  macro_min: 15
+  epoch_begin: 0
+  nms_top_K_micro: 2
+  nms_top_K_macro: 5
+  RAB_args: {'layer_num': 2, 'drop_out': 0.3, 'num_heads': 8, 'dim_feedforward': 128}
+  micro_left_min_dis: 2  # micro_min // 2
+  micro_left_max_dis: 9
+  micro_right_min_dis: 2
+  micro_right_max_dis: 9
+
+  macro_left_min_dis: 7
+  macro_left_max_dis: 29
+  macro_right_min_dis: 7 # macro_min // 2
+  macro_right_max_dis: 29
+#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment256"
+  project_root: "./"
+  feature_root: ~
+  segment_feat_root: "/data/DataSets/cas(me)^2/feature_segment_fblabel/"#"/data/DataSets/AUW-gcn/features/cas(me)^2/feature_segment" #"/data/DataSets/cas(me)^2/feature_segment10"
+  model_save_root: ~
+  output_dir_name: ~
+  anno_csv: "/code/CodeTest/wzl/AUW-GCN/updated_targetall.csv"
+  num_workers: 1
+  device: 'cuda:0'
+
+
+  abfcm_training_lr: 0.01
+  abfcm_weight_decay: 0.1
+  abfcm_lr_scheduler: 0.96
+  abfcm_apex_gamma: 1
+  abfcm_apex_alpha: 0.90
+  abfcm_action_gamma: 1
+  abfcm_action_alpha: 0.80
+  abfcm_start_end_gama: 1
+  abfcm_start_end_alpha: 0.90
+  abfcm_label_smooth: 0.16
+  abfcm_best_epoch: 47
+
+  micro_apex_score_threshold: 0.3
+  macro_apex_score_threshold: 0.7
+
+  epochs: 100
+  batch_size: 128
+
+  verbose: False
+
+  macro_ration: 0.5 # balance micro and macro
+  micro_normal_range: 1
+  macro_normal_range: 3
+
+#  subject_list: [
+#      "casme_016","casme_015","casme_019","casme_020","casme_021",
+#      "casme_022","casme_023","casme_024","casme_025","casme_026",
+#      "casme_027","casme_029","casme_030","casme_031","casme_032",
+#      "casme_033","casme_034","casme_035","casme_036","casme_037",
+#      "casme_038","casme_040"
+#  ]
+  subject_list: [
+    "casme_016","casme_015"
+  ]
