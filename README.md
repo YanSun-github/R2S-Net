@@ -60,4 +60,4 @@ If you feel this project helpful to your research, please cite our work.
 [📄 Our Paper (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0306457325004194)
  
 
-##### You may open an issue or email me at xxx if you have any inquiries or issues.
+##### You may open an issue or email me at yansun@shu.edu.cn if you have any inquiries or issues.
