@@ -57,7 +57,19 @@ $ bash pipeline.sh
 ## Citation
 If you feel this project helpful to your research, please cite our work.
  
-[📄 Our Paper (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0306457325004194)
- 
+```
+@article{SUN2026104478,
+title = {R2S-Net: Recognize-then-refine-spot network for micro-expression spot-then-recognize},
+journal = {Information Processing & Management},
+volume = {63},
+number = {2, Part B},
+pages = {104478},
+year = {2026},
+issn = {0306-4573},
+doi = {https://doi.org/10.1016/j.ipm.2025.104478},
+url = {https://www.sciencedirect.com/science/article/pii/S0306457325004194},
+author = {Yan Sun and Zhiliang Wang and Xiangfeng Luo},
+}
+``` 
 
 ##### You may open an issue or email me at yansun@shu.edu.cn if you have any inquiries or issues.
