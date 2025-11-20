@@ -13,13 +13,13 @@ We compare our method against others on two benchmark datasets, i.e., [CAS(ME)<s
 ## Experiment environment 
 OS: Ubuntu 20.04.4 LTS 
 
-Python: 3.8
+Python: 3.9.0
 
-Pytorch: 1.10.1
+Pytorch: 1.13.1
 
-CUDA: 10.2, cudnn: 7.6.5
+CUDA: 11.6, cudnn: 8.5.0
 
-GPU: NVIDIA GeForce RTX 2080 Ti
+GPU: NVIDIA GeForce RTX 3090 
 
 ## Getting started
 1. Clone this repository
@@ -57,7 +57,7 @@ $ bash pipeline.sh
 ## Citation
 If you feel this project helpful to your research, please cite our work.
 ```
- 
+ [📄 Our Paper (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0306457325004194)
 ```
 
 ##### You may open an issue or email me at xxx if you have any inquiries or issues.
