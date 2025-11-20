@@ -6,7 +6,7 @@
 
 
 ## Results
-We compare our method against others on two benchmark datasets, i.e., [CAS(ME)<sup>2</sup>](http://fu.psych.ac.cn/CASME/cas(me)2-en.php) and [SAMM-LV](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php) in terms of STRS、F1-Score Spotting、F1-Score Analysis:
+We compare our method against others on three benchmark datasets, i.e., [CAS(ME)<sup>2</sup>](http://fu.psych.ac.cn/CASME/cas(me)2-en.php), [CASME II](http://casme.psych.ac.cn/casme/c2), and [SAMM-LV](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php) in terms of STRS、F1-Score Spotting、F1-Score Analysis:
 
 ![model_results](./figures/result.png)
 
