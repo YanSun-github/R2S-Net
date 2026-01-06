@@ -44,12 +44,12 @@ $ pip install -r requirements.txt
 
 Set `SUB_LIST`, 
 `OUTPUT` (dir for saving ckpts, log and results)
-and `DATASET` ( ["samm" | "cas(me)^2"] )  in [pipeline.sh], then run:
+and `DATASET` ( ["samm" | "$cas(me)^2$"] )  in [pipeline.sh], then run:
 ```shell
 $ bash pipeline.sh
 ```
 
-**We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz]().
+**We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz](https://pan.baidu.com/s/126HNyPz9kHOZb4oR70u4Ww?pwd=4321).
 
  
 
