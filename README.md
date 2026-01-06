@@ -44,7 +44,7 @@ $ pip install -r requirements.txt
 
 Set `SUB_LIST`, 
 `OUTPUT` (dir for saving ckpts, log and results)
-and `DATASET` ( ["samm" | "$cas(me)^2$"] )  in [pipeline.sh], then run:
+and `DATASET` ( ["samm" | "cas(me)^2"] )  in [pipeline.sh], then run:
 ```shell
 $ bash pipeline.sh
 ```
